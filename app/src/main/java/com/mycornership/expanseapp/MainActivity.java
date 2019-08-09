@@ -25,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText symbol, symbol2;
     private Spinner spinner1, spinner2;
     private Button btn_convert;
+    //myItems is used to put together the currency symbol and it's corresponding country flag 
+   // for spinner adapter
     private List<CurrencyItems> myItems = new ArrayList<>();
+    // currency_symbol is used to hold currency symbol 
     private List<String> currency_symbol = new ArrayList<>();
+    //ratList is used to store the currency rates and symbol gotten from database 
     private List<CurrencyRate> rateList = new ArrayList<>();
 
     @Override
@@ -43,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<CurrencyRate> currencyRates) {
                 rateList = currencyRates;
+
+                //Iterate through the data from data from database 
+                //Then store the symbol and currency rate on the CurrencyItem 
+                // used for spinner adapter 
+
                 for(int i = 0; i < currencyRates.size(); i++){
                     currency_symbol.add(currencyRates.get(i).getSymbol());
                     String sbl = currencyRates.get(i).getSymbol();

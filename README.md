@@ -1,5 +1,4 @@
 # ExpanseApp
-# ExpanseApp
 To download and run this project you need to have the following tools
 
 Tools:
@@ -23,3 +22,11 @@ To run on an android device you need to have android 5.0 or later.
 Note:
 The note rates are fetch from the fixer.io, but the  converter calculatio
 is done on the app.
+
+
+Usage:
+1. Select the currency you wants to convert from the 
+ first selection field (Spinner)  and the currency you are converting to. 
+2. Enter the amount in number that you want to be converted. 
+3. Then click the convert button on the screen 
+4. You will see the second screen updated to the value Of The converted coherency.

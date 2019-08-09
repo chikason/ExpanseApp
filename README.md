@@ -6,6 +6,10 @@ Tools:
 2. Android grade plugin 3.4.1
 3. Gradle version 5.1.1
 
+-The project uses androidx libraries.
+-Retrofit for it internet communication 
+
+
 You also need to have buld tool version 28.0.3 installed. 
 the design targets api 23 designs
  Libraryes. 
@@ -20,7 +24,7 @@ To run on an android device you need to have android 5.0 or later.
 
 
 Note:
-The note rates are fetch from the fixer.io, but the  converter calculatio
+The currency  rates are fetch from the fixer.io, but the  converter calculatio
 is done on the app.
 
 

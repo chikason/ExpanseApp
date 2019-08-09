@@ -62,9 +62,17 @@ public class MainActivity extends AppCompatActivity {
         btn_convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               //reads text on the input fields
+               //the conversion is based on the value in the input field
+
                 if (symbol.getText().length() != 0 && symbol2.getText().length() != 0) {
                     double value1 = Double.parseDouble(symbol.getText().toString().trim());
                     double value2 = Double.parseDouble(symbol2.getText().toString().trim());
+
+                  //calls the function that will perform the convertion
+                  // and pass the convert from value and convert to value 
+                  // the selected position here is used to read the value of the selected symbol 
+
                     double result = convertValues(value1, value2, spinner1.getSelectedItemPosition(), spinner2.getSelectedItemPosition());
 
                     symbol2.setText(String.valueOf(result));
@@ -85,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addSpinnerListener() {
+           //Reads the symbol on the spinner each time it is selected
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

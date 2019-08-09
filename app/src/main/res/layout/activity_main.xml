@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar_layout_custom"
+        android:id="@+id/bar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/text_image"
+        android:src="@drawable/crs"
+        android:scaleType="fitStart"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/bar"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/currency1"
+        android:textSize="21sp"
+        android:gravity="left|center"
+        android:hint="1"
+        android:paddingLeft="8dp"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/text_image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currency_symbol"
+        android:text="@string/cur1"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:textColor="@color/dark"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_image"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/currency2"
+        android:textSize="21sp"
+        android:hint="1.38157"
+        android:gravity="left|center"
+        android:inputType="none"
+        android:paddingLeft="8dp"
+        android:editable="false"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/currency1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currency_symbol2"
+        android:text="@string/cur2"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:textColor="@color/dark"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currency1"/>
+
+    <Spinner
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:id="@+id/currency_selector1"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_border_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currency2"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/image_switch"
+        android:src="@drawable/swap_horizontal"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintLeft_toRightOf="@id/currency_selector1"
+        app:layout_constraintRight_toLeftOf="@id/currency_selector2"
+        app:layout_constraintTop_toBottomOf="@id/currency2"/>
+
+    <Spinner
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:id="@+id/currency_selector2"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_border_background"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currency2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/btn_convert"
+        android:text="@string/cvt"
+        android:textSize="23sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_button_green"
+        app:layout_constraintTop_toBottomOf="@id/image_switch"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/desc"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:drawableEnd="@drawable/error_"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableRight="@drawable/error_" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
